@@ -7,7 +7,7 @@ hamMenu.addEventListener('click', () => {
 
     navLinks.classList.toggle('isOpen', !isOpen);
     hamMenu.setAttribute('aria-expanded', !isOpen);
-    hamMenu.setAttribute('aria-label', 'Close Menu');
+    hamMenu.setAttribute('aria-label', isOpen ? 'Open navigation menu': 'Close navigation menu');
 
     console.log(isOpen);
 });
@@ -15,7 +15,7 @@ hamMenu.addEventListener('click', () => {
 function closeMenu() {
     navLinks.classList.remove('isOpen');
     hamMenu.setAttribute('aria-expanded', 'false');
-    hamMenu.setAttribute('aria-label', 'Open Menu');
+    hamMenu.setAttribute('aria-label', 'Open navigation menu');
 }
 
 links.forEach(link => {
@@ -27,5 +27,5 @@ document.addEventListener('keydown', event => {
 });
 
 window.addEventListener('resize', () => {
-    if (window.innerWidth === 767) closeMenu();
+    if (window.innerWidth > 767) closeMenu();
 })

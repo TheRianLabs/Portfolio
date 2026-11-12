@@ -3,31 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RainLabs</title>
+    <meta name="description" content="Christian is a frontend developer who builds functional, responsive and user-friendly websites.">
+    <title>RianLabs</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Manrope:wght@200..800&family=Nanum+Gothic&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./styles/index.css">
     <script src="./scripts/index.js" defer></script>
 </head>
 <body>
-    <header id="header">
-        <nav class="navbar container">
+    <header class="site-header" id="header">
+        <nav class="navbar container" aria-label="Main navigation">
             <a href="#header" class="logo">RianLabs</a>
 
             <button 
                 class="ham-menu"
-                aria-expanded="false"
-                aria-label="Open Menu"
                 type="button"
+                aria-expanded="false"
+                aria-label="Open navigation menu"
+                aria-controls="nav-links"
             >
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <div class="nav-links">
-                <ul>
+            <div class="nav-links" id="nav-links">
+                <ul class="nav-ul">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
@@ -38,19 +42,32 @@
     </header>
 
     <main>
-        <section class="hero-section container">
+        <section class="hero-section container" aria-labelledby="hero-title">
             <div class="hero-texts">
-                <h1>Frontend Developer</h1>
-                <p>Hello, I'm Christian.</p>
-                <p>I'm a frontend developer who enjoys turning ideas and designs into functional, responsive websites. I love learning, building projects and continuously improving my skills.</p>
+                <p class="hero-eyebrow">Frontend Developer</p>
+                <p class="hero-title" id="hero-title">Hello, I'm Christian.</p>
+                <p class="hero-description">
+                    I'm a frontend developer who enjoys turning ideas and designs into 
+                    functional, responsive websites. I love learning, building projects 
+                    and continuously improving my skills.
+                </p>
+
+                <div class="hero-buttons">
+                    <a class="button button-primary" href="#projects">Live Projects</a>
+                    <a class="button button-secondary" href="#contact">Contact Me</a>
+                </div>
             </div>
-            <img src="./assets/profile-image.jpg" alt="My profile image" class="profile-image">
+
+            <img 
+                src="./assets/profile-picture.webp" 
+                alt="Portrait of Christian" 
+                class="profile-image"
+                width="640"
+                height="800"
+            >
         </section>
-        
     </main>
 
-    <footer>
-
-    </footer>
+    <footer></footer>
 </body>
 </html>
