@@ -5,7 +5,7 @@ const links = navLinks.querySelectorAll('a');
 hamMenu.addEventListener('click', () => {
     const isOpen = hamMenu.getAttribute('aria-expanded') === 'true';
 
-    navLinks.classList.toggle('isOpen', !isOpen);
+    navLinks.classList.toggle('is-open', !isOpen);
     hamMenu.setAttribute('aria-expanded', !isOpen);
     hamMenu.setAttribute('aria-label', isOpen ? 'Open navigation menu': 'Close navigation menu');
 
@@ -13,7 +13,7 @@ hamMenu.addEventListener('click', () => {
 });
 
 function closeMenu() {
-    navLinks.classList.remove('isOpen');
+    navLinks.classList.remove('is-open');
     hamMenu.setAttribute('aria-expanded', 'false');
     hamMenu.setAttribute('aria-label', 'Open navigation menu');
 }
